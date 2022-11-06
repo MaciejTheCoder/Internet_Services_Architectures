@@ -1,0 +1,11 @@
+com/isa/lab1/director/DirectorRepo.class
+com/isa/lab1/CommandLine.class
+com/isa/lab1/repository/Repository.class
+com/isa/lab1/Lab1App.class
+com/isa/lab1/movie/MovieService.class
+com/isa/lab1/configuration/Datainitialize.class
+com/isa/lab1/movie/Movie.class
+com/isa/lab1/director/DirectorService.class
+com/isa/lab1/datastore/Datastore.class
+com/isa/lab1/movie/MovieRepo.class
+com/isa/lab1/director/Director.class
