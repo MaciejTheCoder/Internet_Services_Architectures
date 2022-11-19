@@ -1,0 +1,22 @@
+# Internet_Services_Architectures
+Spring projects from Internet Services Architectures course from the University.
+
+Scope of the second laboratory is to create application with basic components of Spring Data (SQL database) and 
+Spring MVC (REST services implementation). Project is based on the code developed during the first laboratories.
+
+The list of tools required to build and run the project:
+  Open JDK 11.x+
+  Apache Maven 3.5.x+
+
+Building:
+  In order to build project use:
+    mvn clean package
+  If your default java is not from JDK 11 or higher use:
+    JAVA_HOME=<path_to_jdk_home> mvn package
+
+Running
+  In order to run using Open Liberty Application server use:
+    java -jar target/movie-0.0.1-SNAPSHOT.jar
+  If your default java is not from JDK 11 or higher use:
+    <path_to_jdk_home>/bin/java -jar target/movie-0.0.1-SNAPSHOT.jar
+      
