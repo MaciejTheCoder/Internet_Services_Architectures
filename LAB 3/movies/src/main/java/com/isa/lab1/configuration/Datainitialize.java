@@ -25,15 +25,11 @@ public class Datainitialize {
     public synchronized void Initialize(){
 
         Director director = Director.builder()
-            .name("Steven Spielberg")
-            .age(76)
-            .nationality("USA")
+            .id(1L)
             .build();
 
         Director director_2 = Director.builder()
-            .name("Quentin Tarantino")
-            .age(59)
-            .nationality("USA")
+            .id(2L)
             .build();
 
         directorservice.create(director);

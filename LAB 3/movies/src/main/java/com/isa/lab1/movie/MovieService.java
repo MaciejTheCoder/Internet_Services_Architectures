@@ -27,10 +27,10 @@ public class MovieService {
         return repo.findById(id);
     }
 
-    public Optional<Movie> find(String username, Long id) {
-        Optional<User> user = userRepository.findById(username);
-        if (user.isPresent()) {
-            return characterRepository.findByIdAndUser(id, user.get());
+    public Optional<Movie> find(Long dir_id, Long id) {
+        Optional<Director> director = dirrepo.findById(dir_id);
+        if (director.isPresent()) {
+            return repo.findByIdAndDirector(id, director.get());
         } else {
             return Optional.empty();
         }
@@ -38,6 +38,10 @@ public class MovieService {
 
     public List<Movie> findAll() {
         return repo.findAll();
+    }
+
+    public List<Movie> findAll(Director director) {
+        return repo.findAllByDirector(director);
     }
 
     @Transactional

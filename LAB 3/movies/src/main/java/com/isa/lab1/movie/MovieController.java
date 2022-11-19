@@ -12,12 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
-
 import com.isa.lab1.dto.getmovieresp;
 import com.isa.lab1.dto.getmoviesresp;
 import com.isa.lab1.dto.postmoviereq;
@@ -35,10 +30,7 @@ public class MovieController {
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})//When empty JSON is default
     public ResponseEntity<getmoviesresp> getmovies() {
-        List<Movie> all = movieservice.findAll();
-        Function<Collection<Movie>, getmoviesresp> mapper = getmoviesresp.entityToDtoMapper();
-        getmoviesresp response = mapper.apply(all);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(getmoviesresp.entityToDtoMapper().apply(movieservice.findAll()));
     }
 
     @GetMapping("{id}")
@@ -51,18 +43,18 @@ public class MovieController {
     @PostMapping
     public ResponseEntity<Void> postmovie(@RequestBody postmoviereq request, UriComponentsBuilder builder) {
         Movie movie = postmoviereq
-                .dtoToEntityMapper(id -> directorservice.find(id).orElseThrow())
+                .dtoToEntityMapper(() -> null)
                 .apply(request);
                 movie = movieservice.create(movie);
         return ResponseEntity.created(builder.pathSegment("api", "movies", "{id}")
-                .buildAndExpand(movie.getid()).toUri()).build();
+                .buildAndExpand(movie.getId()).toUri()).build();
     }
 
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deletemovie(@PathVariable("id") long id) {
         Optional<Movie> movie = movieservice.find(id);
         if (movie.isPresent()) {
-            movieservice.delete(movie.get().getid());
+            movieservice.delete(movie.get().getId());
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();

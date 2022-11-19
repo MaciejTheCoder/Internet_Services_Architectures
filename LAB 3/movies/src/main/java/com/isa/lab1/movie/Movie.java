@@ -42,44 +42,4 @@ public class Movie  implements Serializable{
 
     private int length;
 
-    public Long getid() {
-        return id;
-    }
-
-    public Director getdirector(){
-        return director;
-    }
-    
-    public String gettitle() {
-        return title;
-    }
-
-    public int getlength(){
-        return length;
-    }
-
-    public void setid(Long id){
-        this.id = id;
-    }
-
-    public void setdirector(Director director){
-        this.director = director;
-    }
-
-    public void settitle(String title){
-        this.title = title;
-    }
-
-    public void setlength(int length){
-        this.length = length;
-    }
-
-    @Override
-    public String toString(){
-        return "Movie { " + "id: " + id +", title: " 
-        + title + ", " + director + ", length: " + length +" }";
-    }
-
-
-
 }   

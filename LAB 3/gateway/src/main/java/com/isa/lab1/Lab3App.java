@@ -16,7 +16,7 @@ import java.util.Collections;
 public class Lab3App {
 
     public static void main(String[] args) {
-        SpringApplication.run(SimpleRpgApplication.class, args);
+        SpringApplication.run(Lab3App.class, args);
     }
 
     @Bean

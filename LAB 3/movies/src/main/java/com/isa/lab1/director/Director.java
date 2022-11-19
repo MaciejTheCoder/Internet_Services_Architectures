@@ -2,30 +2,30 @@ package com.isa.lab1.director;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.GenerationType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.InheritanceType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
 import javax.persistence.Table;
+import javax.persistence.CascadeType;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+import javax.persistence.OneToMany;
+import java.util.List;
 import com.isa.lab1.movie.Movie;
 
 @Getter
 @Setter
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@ToString
 @EqualsAndHashCode
 @Entity
 @Table(name = "directors")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Director implements Serializable{
 
     @Id

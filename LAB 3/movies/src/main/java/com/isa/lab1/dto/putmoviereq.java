@@ -26,8 +26,8 @@ public class putmoviereq {
 
     public static BiFunction<Movie, putmoviereq, Movie> dtoToEntityUpdater() {
         return (movie, request) -> {
-            movie.settitle(request.getTitle());
-            movie.setlength(request.getLength());
+            movie.setTitle(request.getTitle());
+            movie.setLength(request.getLength());
             return movie;
         };
     }

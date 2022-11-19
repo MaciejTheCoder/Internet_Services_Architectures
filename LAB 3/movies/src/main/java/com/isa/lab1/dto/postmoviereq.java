@@ -12,6 +12,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 @Getter
 @Setter
@@ -29,9 +30,9 @@ public class postmoviereq {
     private int length;
 
     public static Function<postmoviereq, Movie> dtoToEntityMapper(
-        Function<Long, Director> DirFunction) {
+        Supplier<Director> DirSupplier) {
     return request -> Movie.builder()
-            .director(DirFunction.apply(request.getDirector()))
+            .director(DirSupplier.get())
             .title(request.getTitle())
             .length(request.getLength())
             .build();  

@@ -40,8 +40,8 @@ public class getmoviesresp {
             getmoviesrespBuilder response = getmoviesresp.builder();
             movies.stream()
                     .map(movie -> MovieEntry.builder()
-                            .id(movie.getid())
-                            .title(movie.gettitle())
+                            .id(movie.getId())
+                            .title(movie.getTitle())
                             .build())
                     .forEach(response::movie);
             return response.build();

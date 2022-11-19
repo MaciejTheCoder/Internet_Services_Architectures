@@ -24,18 +24,15 @@ public class getmovieresp {
     
     private Long id;
 
-    private String director;
-
     private String title;
 
     private int length;
 
     public static Function<Movie, getmovieresp> entityToDtoMapper() {
         return movie -> getmovieresp.builder()
-                .id(movie.getid())
-                .director(movie.getdirector().getname())
-                .title(movie.gettitle())
-                .length(movie.getlength())
+                .id(movie.getId())
+                .title(movie.getTitle())
+                .length(movie.getLength())
                 .build();
     }
 }

@@ -35,7 +35,7 @@ public class DirectorService {
     }
 
     @Transactional
-    public void delete(Long id) {
-        repo.deleteById(id);
+    public void delete(Director director) {
+        repo.delete(director);
     }
 }
