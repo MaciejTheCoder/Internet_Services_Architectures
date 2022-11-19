@@ -1,0 +1,22 @@
+# Internet_Services_Architectures
+Spring projects from Internet Services Architectures course from the University.
+
+During third laboratory I got familiar with basic concepts of decomposition monolithic application into stand-alone modules based on 
+microservices architecture. In my case I created 3 of them: movies, directors and gateway. Project is really similar to that one from the
+previos laboratory.
+
+The list of tools required to build and run the project:
+  Open JDK 11.x+
+  Apache Maven 3.5.x+
+
+Building:
+  In order to build project use:
+    mvn clean package
+  If your default java is not from JDK 11 or higher use:
+    JAVA_HOME=<path_to_jdk_home> mvn package
+
+Running
+  In order to run using Open Liberty Application server use:
+    java -jar target/movie-1.0-SNAPSHOT.jar
+  If your default java is not from JDK 11 or higher use:
+    <path_to_jdk_home>/bin/java -jar target/movie-1.0-SNAPSHOT.jar
