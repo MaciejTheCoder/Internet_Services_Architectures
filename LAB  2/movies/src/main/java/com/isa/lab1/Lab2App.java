@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Lab1App {
+public class Lab2App {
 	public static void main(String[] args) {
 		SpringApplication.run(Lab1App.class, args);
 	}
