@@ -1,0 +1,23 @@
+# Internet_Services_Architectures
+Spring projects from Internet Services Architectures course from the University.
+
+Fisrt laboratory is focused on creating basic application with components of Spring Framework (component,
+repository, service) as well as mechanisms of dependency injection and inversion of control.
+Application is run in terminal.
+
+The list of tools required to build and run the project:
+  Open JDK 11.x+
+  Apache Maven 3.5.x+
+
+Building:
+  In order to build project use:
+    mvn clean package
+  If your default java is not from JDK 11 or higher use:
+    JAVA_HOME=<path_to_jdk_home> mvn package
+
+Running
+  In order to run using Open Liberty Application server use:
+    java -jar target/movie-0.0.1-SNAPSHOT.jar
+  If your default java is not from JDK 11 or higher use:
+    <path_to_jdk_home>/bin/java -jar target/movie-0.0.1-SNAPSHOT.jar
+      
