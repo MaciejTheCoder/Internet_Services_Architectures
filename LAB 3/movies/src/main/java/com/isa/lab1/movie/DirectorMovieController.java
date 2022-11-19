@@ -45,16 +45,8 @@ public class DirectorMovieController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<GetCharacterResponse> getCharacter(@PathVariable("username") String username,
-                                                             @PathVariable("id") long id) {
-        return characterService.find(username, id)
-                .map(value -> ResponseEntity.ok(GetCharacterResponse.entityToDtoMapper().apply(value)))
-                .orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @GetMapping("{id}")
-    public ResponseEntity<getmovieresp> getmovie(@PathVariable("id") Long id, @PathVariable("id") Long id) {
-        return  movieservice.find(id)
+    public ResponseEntity<getmovieresp> getmovie(@PathVariable("id") Long id_dir, @PathVariable("id") Long id) {
+        return  movieservice.find(id_dir,id)
                 .map(value -> ResponseEntity.ok(getmovieresp.entityToDtoMapper().apply(value)))
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }

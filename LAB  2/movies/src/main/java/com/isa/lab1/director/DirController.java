@@ -18,10 +18,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
-import com.isa.lab1.otd.getdirresp;
-import com.isa.lab1.otd.getdirsresp;
-import com.isa.lab1.otd.postdirreq;
-import com.isa.lab1.otd.putdirreq;
+import com.isa.lab1.dto.getdirresp;
+import com.isa.lab1.dto.getdirsresp;
+import com.isa.lab1.dto.postdirreq;
+import com.isa.lab1.dto.putdirreq;
 
 @RestController
 @RequestMapping("api/directors")

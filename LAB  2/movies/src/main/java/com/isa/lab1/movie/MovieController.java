@@ -19,10 +19,10 @@ import java.util.Optional;
 import java.util.function.Function;
 
 import com.isa.lab1.director.DirectorService;
-import com.isa.lab1.otd.getmovieresp;
-import com.isa.lab1.otd.getmoviesresp;
-import com.isa.lab1.otd.postmoviereq;
-import com.isa.lab1.otd.putmoviereq;
+import com.isa.lab1.dto.getmovieresp;
+import com.isa.lab1.dto.getmoviesresp;
+import com.isa.lab1.dto.postmoviereq;
+import com.isa.lab1.dto.putmoviereq;
 
 @RestController
 @RequestMapping("api/movies")

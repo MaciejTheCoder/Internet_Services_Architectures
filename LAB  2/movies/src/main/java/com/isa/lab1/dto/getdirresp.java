@@ -1,4 +1,4 @@
-package com.isa.lab1.otd;
+package com.isa.lab1.dto;
 
 import com.isa.lab1.director.Director;
 
