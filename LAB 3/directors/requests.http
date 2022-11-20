@@ -1,0 +1,15 @@
+Testy
+
+GET http://localhost:8081/api/directors
+
+GET http://localhost:8081/api/directors/1
+
+DEL http://localhost:8081/api/directors/1
+
+POST http://localhost:8081/api/directors
+
+{
+  "name": "Maciej Majewski",
+  "age": 22,
+  "nationality": "Poland"
+}

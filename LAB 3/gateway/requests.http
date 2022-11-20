@@ -1,0 +1,46 @@
+Testy
+
+GET http://localhost:8080/api/movies
+
+GET http://localhost:8080/api/movies/3
+
+GET http://localhost:8080/api/directors
+
+GET http://localhost:8080/api/directors/1
+
+DEL http://localhost:8080/api/movies/5
+
+DEL http://localhost:8080/api/movies/6
+
+DEL http://localhost:8080/api/directors/2
+
+POST http://localhost:8080/api/movies
+
+{
+  "director": 1,
+  "title": "Test",
+  "length": 120
+}
+
+POST http://localhost:8080/api/directors
+
+{
+  "name": "Maciej Majewski",
+  "age": 22,
+  "nationality": "Poland"
+}
+
+PUT http://localhost:8080/api/movies/3
+
+{
+  "title": "new title",
+  "length": 360
+}
+
+PUT http://localhost:8080/api/directors/1
+
+{
+  "name": "Steven Spielberg",
+  "age": 80,
+  "nationality": "Poland"
+}

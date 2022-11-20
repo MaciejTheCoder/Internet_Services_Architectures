@@ -1,0 +1,44 @@
+Testy
+
+GET http://localhost:8082/api/movies
+
+GET http://localhost:8082/api/movies/1
+
+DEL http://localhost:8082/api/movies/1
+
+POST http://localhost:8082/api/movies
+
+{
+  "director": 1,
+  "title": "Test",
+  "length": 120
+}
+
+PUT http://localhost:8082/api/movies/3
+
+{
+  "title": "new title",
+  "length": 360
+}
+
+GET http://localhost:8082/api/directors/2/movies
+
+GET http://localhost:8082/api/directors/2/movies/4
+
+DEL http://localhost:8082/api/directors/2/movies/4
+
+POST http://localhost:8082/api/directors/2/movies
+
+{
+  "title": "test_2",
+  "length": 125
+}
+
+PUT http://localhost:8082/api/directors/2/movies/6
+
+{
+  "title": "new title_2”,
+  "length": 300
+}
+
+DEL http://localhost:8082/api/directors/2
