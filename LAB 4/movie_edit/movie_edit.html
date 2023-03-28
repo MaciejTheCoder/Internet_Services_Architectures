@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Directors&Movies web application"/>
+        <meta name="keywords" content="Directors"/>
+        <meta name="author" content="Maciej Majewski"/>
+        <title>Directors&Movies</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <link rel="stylesheet" href="movie_edit.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="movie_edit.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Directors&Movies</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">about</a></li>
+                    <li><a href="../directors_list/directors_list.html">directors</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Edit movie details</h2></header>
+                    <form class="character__form" id="infoForm">
+                        <label for="title">Title:</label>
+                        <input class="ui-control ui-input" id="title" title="title"/>
+                        <label for="length">Length:</label>
+                        <input class="ui-control ui-input" id="length" name="length" type="number"/>
+                        <input class="ui-control ui-button" type="submit" name="Update"/>
+                    </form>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p>Copyright &copy; 2022, Maciej Majewski</p>
+            </footer>
+        </div>
+    </body>
+</html>

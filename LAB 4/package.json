@@ -1,0 +1,14 @@
+{
+  "name": "directors-movies",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Directors&Movies",
+  "keywords": [
+    "RPG"
+  ],
+  "scripts": {
+    "dev": "http-server -p 8083 -c-1"
+  },
+  "devDependencies": {
+    "http-server": "0.12.3"
+  }
+}

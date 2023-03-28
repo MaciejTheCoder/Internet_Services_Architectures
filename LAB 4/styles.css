@@ -1,0 +1,128 @@
+body {
+    background-color: #ffffff;
+    font-family: Georgia serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+.header {
+    text-align: center;
+    background: #e2d7b2;
+    color: #000000;
+    font-weight: bold;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+.navigation-bar {
+    background-color: #e2cf91;
+}
+
+.navigation-bar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar li {
+    display: inline-block;
+}
+
+.navigation-bar a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.navigation-bar a:hover {
+    background-color: #050000;
+    color: #e2cf91;
+}
+
+.main-section {
+    padding: 10px;
+    background-color: #e2d7b2;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.footer {
+    font-size: small;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.text--justified {
+    text-align: justify;
+}
+
+.text--italic {
+    font-style: italic;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+.ui-control {
+    border-color: #000000;
+    background-color: #ffffff;
+    border-width: 1px;
+    padding: 1px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.ui-control:focus {
+    outline: none;
+}
+
+.ui-button {
+    height: 24px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.ui-input {
+    height: 20px;
+}
+
+.ui-textarea {
+
+}
+
+.hidden {
+    display: none;
+}
+
+.data-table {
+    border-collapse: collapse;
+}
+
+.data-table td, .data-table th {
+    padding: 6px;
+}
+
+.data-table thead {
+    font-weight: bold;
+    background-color: #e2cf91;
+    color: #000000;
+}
+
+.data-table tbody tr:hover {
+    background-color: #e2cf91;
+}
